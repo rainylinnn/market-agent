@@ -1,0 +1,584 @@
+{
+  "summary": {
+    "total": 18,
+    "success": 18,
+    "tsr": 100.0,
+    "error_rate": 0.0,
+    "intent_accuracy": 100.0,
+    "keyword_coverage": 100.0,
+    "forbidden_pass": 100.0,
+    "latency_avg": 9.73,
+    "latency_p50": 6.79,
+    "latency_p95": 48.91,
+    "latency_max": 48.91,
+    "by_category": {
+      "safety": {
+        "total": 2,
+        "ok": 2,
+        "rate": 100.0
+      },
+      "single": {
+        "total": 9,
+        "ok": 9,
+        "rate": 100.0
+      },
+      "multi": {
+        "total": 4,
+        "ok": 4,
+        "rate": 100.0
+      },
+      "boundary": {
+        "total": 3,
+        "ok": 3,
+        "rate": 100.0
+      }
+    },
+    "finished_at": "2026-11-02T21:53:21.766134",
+    "last_run": {
+      "category": "all",
+      "count": 18,
+      "at": "2026-11-02T21:53:21.766134"
+    }
+  },
+  "results": [
+    {
+      "id": "no_hallucination_number",
+      "query": "最近有哪些公司回购股份",
+      "category": "safety",
+      "success": true,
+      "error": null,
+      "elapsed": 6.56,
+      "answer_len": 3755,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-10-08] 可孚医疗（301087）—— 关于回购公司A股股份的进展公告\n2. [2026-10-08] 宁德时代（300750）—— 关于回购公司A股股份的进展公告\n3. [2026-09-03] 宁德时代（300750）—— 关于回购公司A股股份的进展公告\n4. [2026-10-09] 三花智控（002050）—— 关于回购公司A股股份的进展公告\n5. [2026-09-02] 三花智控（002050）—— 关于回购公司A股股份的进展公告\n6. [2026-10-16] 三花智控（002050）—— 关于回购公司A股股份的进展公告\n7. ",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "回购"
+        ],
+        "keywords_expect": [
+          "回购"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "traceability_check",
+      "query": "查找重大资产重组相关公告",
+      "category": "safety",
+      "success": true,
+      "error": null,
+      "elapsed": 4.16,
+      "answer_len": 3938,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-09-10] 湖南黄金（002155）—— 关于重大资产重组获得湖南省国资委批复的公告\n2. [2026-10-10] *ST帅电（605336）—— 关于重大资产重组标的资产完成过户及工商变更登记的公告\n3. [2026-08-18] 骏成科技（301106）—— 关于筹划重大资产重组暨关联交易的提示性公告\n4. [2026-08-22] 锦龙股份（000712）—— 关于筹划重大资产重组事项的提示性公告\n5. [2026-08-31] 节能铁汉（300197）—— 关于筹划重大资产重组暨关联交易的进展公告\n6. [2026-09-30] 节能",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "公告ID"
+        ],
+        "keywords_expect": [
+          "公告ID"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "single_announcement_keyword",
+      "query": "最近有哪些公司回购股份",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 7.31,
+      "answer_len": 3755,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-10-08] 可孚医疗（301087）—— 关于回购公司A股股份的进展公告\n2. [2026-10-09] 三花智控（002050）—— 关于回购公司A股股份的进展公告\n3. [2026-10-08] 宁德时代（300750）—— 关于回购公司A股股份的进展公告\n4. [2026-09-03] 宁德时代（300750）—— 关于回购公司A股股份的进展公告\n5. [2026-09-02] 三花智控（002050）—— 关于回购公司A股股份的进展公告\n6. [2026-10-16] 三花智控（002050）—— 关于回购公司A股股份的进展公告\n7. ",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "回购"
+        ],
+        "keywords_expect": [
+          "回购"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "single_announcement_reorg",
+      "query": "查找重大资产重组相关公告",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 5.59,
+      "answer_len": 3936,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-09-10] 湖南黄金（002155）—— 关于重大资产重组获得湖南省国资委批复的公告\n2. [2026-10-10] *ST帅电（605336）—— 关于重大资产重组标的资产完成过户及工商变更登记的公告\n3. [2026-08-18] 骏成科技（301106）—— 关于筹划重大资产重组暨关联交易的提示性公告\n4. [2026-08-22] 锦龙股份（000712）—— 关于筹划重大资产重组事项的提示性公告\n5. [2026-08-31] 节能铁汉（300197）—— 关于筹划重大资产重组暨关联交易的进展公告\n6. [2026-09-30] 节能",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "重组"
+        ],
+        "keywords_expect": [
+          "重组"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "single_announcement_reduce",
+      "query": "股东减持的公告有哪些",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 7.72,
+      "answer_len": 3670,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-08-26] 湖南裕能（301358）—— 关于股东减持股份的预披露公告\n2. [2026-08-24] 和远气体（002971）—— 关于股东减持股份的预披露公告\n3. [2026-08-24] 华康洁净（301235）—— 关于股东减持股份的预披露公告\n4. [2026-08-12] 优德精密（300549）—— 关于公司股东减持股份实施情况公告\n5. [2026-09-01] 瑞松科技（688090）—— 股东减持股份计划公告\n6. [2026-09-03] ST南新（688189）—— 股东减持股份计划公告\n7. [2026-10-14]",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "减持"
+        ],
+        "keywords_expect": [
+          "减持"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "company_by_code",
+      "query": "600000 是什么公司",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 4.2,
+      "answer_len": 934,
+      "answer_preview": "【浦发银行（600000）】\n\n公司全称：上海浦东发展银行股份有限公司\n所属行业：金融业\n注册地区：上海市\n上市日期：1999-11-10\n上市市场：上海证券交易所\n\n公告统计（2026-08-13 ~ 2026-10-31）：\n  总计 18 条\n  核心 L1：4 条\n  重要 L2：10 条\n  模板 L3：4 条\n\n最近公告：\n  [2026-10-31] 上海浦东发展银行股份有限公司董事会2026年第十一次会议决议公告\n  [2026-10-31] 上海浦东发展银行股份有限公司关于高级管理人员等自愿增持公司股份计划的公告\n  [2026-10-31] 上海浦东发展银行股份有限公司20",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "company"
+        ],
+        "actual_intents": [
+          "company"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "浦发银行"
+        ],
+        "keywords_expect": [
+          "浦发银行"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "company_by_name",
+      "query": "介绍一下贵州燃气",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 5.41,
+      "answer_len": 956,
+      "answer_preview": "【贵州燃气（600903）】\n\n公司全称：贵州燃气集团股份有限公司\n所属行业：电力、热力、燃气及水生产和供应业\n注册地区：贵州省\n上市日期：2017-11-07\n上市市场：上海证券交易所\n\n公告统计（2026-08-04 ~ 2026-10-30）：\n  总计 108 条\n  核心 L1：40 条\n  重要 L2：60 条\n  模板 L3：8 条\n\n最近公告：\n  [2026-10-30] 贵州燃气集团股份有限公司第四届董事会第二十六次会议决议公告\n  [2026-10-30] 贵州燃气集团股份有限公司关于拟通过公开摘牌方式参与收购贵州天然气能源投资股份有限公司所持铜仁天然气能源投资有限公司4",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "company"
+        ],
+        "actual_intents": [
+          "company"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "贵州燃气"
+        ],
+        "keywords_expect": [
+          "贵州燃气"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "company_announcement_count",
+      "query": "贵州燃气发了多少公告",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 6.79,
+      "answer_len": 958,
+      "answer_preview": "【贵州燃气（600903）】\n\n公司全称：贵州燃气集团股份有限公司\n所属行业：电力、热力、燃气及水生产和供应业\n注册地区：贵州省\n上市日期：2017-11-07\n上市市场：上海证券交易所\n\n公告统计（2026-08-04 ~ 2026-10-30）：\n  总计 108 条\n  核心 L1：40 条\n  重要 L2：60 条\n  模板 L3：8 条\n\n最近公告：\n  [2026-10-30] 贵州燃气集团股份有限公司第四届董事会第二十六次会议决议公告\n  [2026-10-30] 贵州燃气集团股份有限公司关于拟通过公开摘牌方式参与收购贵州天然气能源投资股份有限公司所持铜仁天然气能源投资有限公司4",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "company"
+        ],
+        "actual_intents": [
+          "company"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "公告"
+        ],
+        "keywords_expect": [
+          "公告"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "market_index",
+      "query": "今天大盘怎么样",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 2.56,
+      "answer_len": 1389,
+      "answer_preview": "【主要指数】\n  上证指数         3,599.02   ↓   -1.44%\n  沪深300        3,985.50   ↓   -1.39%\n  科创50         1,160.84   ↓   -5.48%\n  深证成指        10,833.78   ↓   -2.73%\n  创业板指         2,413.63   ↓   -4.13%\n  （数据时间：2026-10-31 19:14:36）\n\n---\n参考来源：\n1. 指数行情来自新浪财经\n\n【结构化数据】\n{\n  \"query\": \"今天大盘怎么样\",\n  \"intents\": [\n    \"i",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "market"
+        ],
+        "actual_intents": [
+          "market"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "上证指数"
+        ],
+        "keywords_expect": [
+          "上证指数"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "market_fx",
+      "query": "人民币兑美元汇率",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 4.25,
+      "answer_len": 1803,
+      "answer_preview": "【人民币汇率中间价】\n  美元/人民币                 6.7138       -9.0bp\n  欧元/人民币                 7.4792     +222.0bp\n  100日元/人民币              4.2419      -34.0bp\n  港元/人民币                 0.8559       -0.2bp\n  英镑/人民币                 8.9476     +375.0bp\n  人民币/丹麦克朗               0.9994      -26.0bp\n  人民币/俄罗斯卢布        ",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "market"
+        ],
+        "actual_intents": [
+          "market"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "美元"
+        ],
+        "keywords_expect": [
+          "美元"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "market_gold",
+      "query": "黄金价格多少",
+      "category": "single",
+      "success": true,
+      "error": null,
+      "elapsed": 3.53,
+      "answer_len": 1292,
+      "answer_preview": "【黄金行情（Au99.99）】\n  2026-10-26   收盘   872.99   高   861.41   低   855.00\n  2026-10-27   收盘   868.00   高   860.31   低   858.00\n  2026-10-28   收盘   873.00   高   868.99   低   860.20\n  2026-10-29   收盘   873.80   高   865.26   低   863.05\n  2026-10-30   收盘   867.00   高   854.76   低   853.50\n\n---\n参考来源：\n1. 黄金行情来",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "market"
+        ],
+        "actual_intents": [
+          "market"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "黄金"
+        ],
+        "keywords_expect": [
+          "黄金"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "multi_market_company",
+      "query": "今天大盘怎么样，浦发银行是什么公司",
+      "category": "multi",
+      "success": true,
+      "error": null,
+      "elapsed": 33.66,
+      "answer_len": 1281,
+      "answer_preview": "## 一、今天大盘情况\n\n截至 **2026-10-31 19:14:36**，主要指数普遍下跌，市场整体偏弱，其中科创50、创业板指跌幅较大。\n\n| 指数 | 点位 | 涨跌幅 |\n|---|---:|---:|\n| 上证指数 | 3,599.02 | -1.44% |\n| 沪深300 | 3,985.50 | -1.39% |\n| 深证成指 | 10,833.78 | -2.73% |\n| 创业板指 | 2,413.63 | -4.13% |\n| 科创50 | 1,160.84 | -5.48% |\n\n整体来看，当日大盘呈现明显调整，成长风格指数跌幅大于宽基指数。\n\n---\n\n## 二、浦",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "company",
+          "market"
+        ],
+        "actual_intents": [
+          "company",
+          "market"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "上证指数",
+          "浦发银行"
+        ],
+        "keywords_expect": [
+          "上证指数",
+          "浦发银行"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "multi_announcement_market",
+      "query": "最近有哪些公司回购股份，另外今天大盘怎么样",
+      "category": "multi",
+      "success": true,
+      "error": null,
+      "elapsed": 48.91,
+      "answer_len": 1302,
+      "answer_preview": "## 一、近期公司回购股份情况\n\n从公告检索结果看，近期明确披露**回购股份进展**的公司为：\n\n- **今天国际（300532）**  \n  该公司近期多次发布回购公司股份进展公告，具体包括：\n  1. **2026-10-08**：关于回购公司股份的进展公告  \n  2. **2026-09-01**：关于回购公司股份的进展公告  \n  3. **2026-08-03**：关于回购公司股份的进展公告  \n\n目前检索范围内**未检索到其他公司**发布回购股份相关公告。\n\n与股份回购、股东增持相关的补充信息中，今天国际还披露了：\n\n- **2026-10-13**：关于董事长增持公司股份计划实",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement",
+          "market"
+        ],
+        "actual_intents": [
+          "announcement",
+          "market"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "回购"
+        ],
+        "keywords_expect": [
+          "回购"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "company_filtered_announcement",
+      "query": "浦发银行最近有什么公告",
+      "category": "multi",
+      "success": true,
+      "error": null,
+      "elapsed": 7.11,
+      "answer_len": 4288,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-08-25] 浦发银行（600000）—— 上海浦东发展银行股份有限公司关于2026年第一期绿色金融债券发行完毕的公告\n2. [2026-09-18] 浦发银行（600000）—— 上海浦东发展银行股份有限公司关于2026年第一期金融债券发行完毕的公告\n3. [2026-10-21] 浦发银行（600000）—— 上海浦东发展银行股份有限公司关于首席风险官、首席合规官任职资格获核准的公告\n4. [2026-10-31] 浦发银行（600000）—— 上海浦东发展银行股份有限公司关于高级管理人员等自愿增持公司股份计划的公告\n5. [2026-10-",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "浦发银行"
+        ],
+        "keywords_expect": [
+          "浦发银行"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "company_filtered_by_code",
+      "query": "688728 最近有什么公告",
+      "category": "multi",
+      "success": true,
+      "error": null,
+      "elapsed": 7.57,
+      "answer_len": 4360,
+      "answer_preview": "检索到 10 条相关公告：\n\n1. [2026-08-08] 格科微（688728）—— 格科微有限公司关于2023年限制性股票激励计划首次授予部分第三个归属期及预留部分第二个归属期归属结果公告\n2. [2026-09-19] 格科微（688728）—— 格科微有限公司关于2026年度向特定对象发行A股股票预案披露的提示性公告\n3. [2026-09-19] 格科微（688728）—— 格科微有限公司关于变更回购股份用途并注销暨减少注册资本的公告\n4. [2026-09-19] 格科微（688728）—— 格科微有限公司关于2026年度向特定对象发行A股股票不存在直接或通过利益相关方向参与认购",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "announcement"
+        ],
+        "actual_intents": [
+          "announcement"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "格科微"
+        ],
+        "keywords_expect": [
+          "格科微"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "boundary_no_company",
+      "query": "介绍一下这个公司",
+      "category": "boundary",
+      "success": true,
+      "error": null,
+      "elapsed": 8.25,
+      "answer_len": 30,
+      "answer_preview": "请问您想介绍哪家公司？请提供公司名称、股票代码或相关上下文。",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "company"
+        ],
+        "actual_intents": [
+          "company"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "公司名称",
+          "股票代码",
+          "请提供"
+        ],
+        "keywords_expect": [
+          "公司名称",
+          "股票代码",
+          "没有识别",
+          "请提供"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "boundary_out_of_scope",
+      "query": "今天天气怎么样",
+      "category": "boundary",
+      "success": true,
+      "error": null,
+      "elapsed": 4.05,
+      "answer_len": 72,
+      "answer_preview": "这个问题看起来和 A 股投研无关。我可以帮你查询：\n· 上市公司公告（回购、重组、减持等）\n· 公司基本信息与公告统计\n· 市场行情、汇率、黄金",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [],
+        "actual_intents": [],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "公告",
+          "公司",
+          "行情",
+          "无关"
+        ],
+        "keywords_expect": [
+          "公告",
+          "公司",
+          "行情",
+          "无关"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    },
+    {
+      "id": "boundary_nonexistent_company",
+      "query": "介绍一下不存在的公司XYZ",
+      "category": "boundary",
+      "success": true,
+      "error": null,
+      "elapsed": 7.52,
+      "answer_len": 102,
+      "answer_preview": "没有识别出「介绍一下不存在的公司XYZ」中提到的公司。请提供公司名称或 6 位股票代码。\n\n【结构化数据】\n{\n  \"query\": \"介绍一下不存在的公司XYZ\",\n  \"found\": false\n}",
+      "metrics": {
+        "intent_match": true,
+        "expected_intents": [
+          "company"
+        ],
+        "actual_intents": [
+          "company"
+        ],
+        "keywords_ok": true,
+        "keywords_hit": [
+          "没有识别",
+          "请提供"
+        ],
+        "keywords_expect": [
+          "没有识别",
+          "没有找到",
+          "未找到",
+          "请提供"
+        ],
+        "forbidden_ok": true,
+        "forbidden_hit": [],
+        "follow_up_ok": true
+      }
+    }
+  ]
+}

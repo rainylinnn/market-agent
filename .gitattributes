@@ -1,0 +1,19 @@
+# 统一换行策略：仓库内存 LF，Windows 脚本检出为 CRLF
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+*.py text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sql text eol=lf
+
+# 二进制资源不做换行转换
+*.png binary
+*.jpg binary
+*.pdf binary

@@ -1,0 +1,37 @@
+[project]
+name = "market-agent"
+version = "0.1.0"
+description = "基于 A2A 协议的跨框架多智能体投研系统"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+dependencies = [
+    # A2A 协议（官方 SDK，protobuf 版）
+    "a2a-sdk>=1.3.0",
+
+    # Web 服务
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+
+    # 数据库
+    "pymysql>=1.1.0",
+    "pymilvus>=3.0.0",
+
+    # HTTP 与数据处理
+    "requests>=2.32.0",
+    "pandas>=2.2.0",
+]
+
+[project.optional-dependencies]
+# 本地向量模型（可选，用 BGE-M3 时才需要，体积较大）
+local-embedding = [
+    "sentence-transformers>=3.0.0",
+]
+
+[tool.setuptools]
+packages = ["a2a_server", "utils"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

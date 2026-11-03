@@ -1,0 +1,219 @@
+[
+  {
+    "id": "single_announcement_keyword",
+    "category": "single",
+    "query": "最近有哪些公司回购股份",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["回购"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图 + 语义检索，数据库 L1 回购公告 4254 条"
+  },
+  {
+    "id": "single_announcement_reorg",
+    "category": "single",
+    "query": "查找重大资产重组相关公告",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["重组"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图，L1 重组公告 493 条"
+  },
+  {
+    "id": "single_announcement_reduce",
+    "category": "single",
+    "query": "股东减持的公告有哪些",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["减持"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图，L1 减持公告 1286 条"
+  },
+  {
+    "id": "company_by_code",
+    "category": "single",
+    "query": "600000 是什么公司",
+    "expect": {
+      "intents": ["company"],
+      "keywords": ["浦发银行"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图 + 代码查公司，可从 companies 表核对"
+  },
+  {
+    "id": "company_by_name",
+    "category": "single",
+    "query": "介绍一下贵州燃气",
+    "expect": {
+      "intents": ["company"],
+      "keywords": ["贵州燃气"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图 + 名称查公司"
+  },
+  {
+    "id": "company_announcement_count",
+    "category": "single",
+    "query": "贵州燃气发了多少公告",
+    "expect": {
+      "intents": ["company"],
+      "keywords": ["公告"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "公司公告统计，数据库实测 108 条"
+  },
+  {
+    "id": "market_index",
+    "category": "single",
+    "query": "今天大盘怎么样",
+    "expect": {
+      "intents": ["market"],
+      "keywords": ["上证指数"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图 + 指数行情"
+  },
+  {
+    "id": "market_fx",
+    "category": "single",
+    "query": "人民币兑美元汇率",
+    "expect": {
+      "intents": ["market"],
+      "keywords": ["美元"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图 + 汇率"
+  },
+  {
+    "id": "market_gold",
+    "category": "single",
+    "query": "黄金价格多少",
+    "expect": {
+      "intents": ["market"],
+      "keywords": ["黄金"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "单意图 + 黄金行情"
+  },
+  {
+    "id": "multi_market_company",
+    "category": "multi",
+    "query": "今天大盘怎么样，浦发银行是什么公司",
+    "expect": {
+      "intents": ["market", "company"],
+      "keywords": ["上证指数", "浦发银行"],
+      "keyword_mode": "all",
+      "forbidden": []
+    },
+    "note": "双意图：市场 + 公司，验证并发调度与汇总"
+  },
+  {
+    "id": "multi_announcement_market",
+    "category": "multi",
+    "query": "最近有哪些公司回购股份，另外今天大盘怎么样",
+    "expect": {
+      "intents": ["announcement", "market"],
+      "keywords": ["回购"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "双意图：公告 + 市场"
+  },
+  {
+    "id": "company_filtered_announcement",
+    "category": "multi",
+    "query": "浦发银行最近有什么公告",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["浦发银行"],
+      "keyword_mode": "any",
+      "forbidden": ["利欧股份", "三花智控"]
+    },
+    "note": "公司过滤测试：必须只返回浦发银行的公告，不能串到其他公司"
+  },
+  {
+    "id": "company_filtered_by_code",
+    "category": "multi",
+    "query": "688728 最近有什么公告",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["格科微"],
+      "keyword_mode": "any",
+      "forbidden": ["浦发银行"]
+    },
+    "note": "代码过滤测试：688728 = 格科微"
+  },
+  {
+    "id": "boundary_no_company",
+    "category": "boundary",
+    "query": "介绍一下这个公司",
+    "expect": {
+      "intents": ["company"],
+      "keywords": ["公司名称", "股票代码", "没有识别", "请提供"],
+      "keyword_mode": "any",
+      "forbidden": [],
+      "need_follow_up": false
+    },
+    "note": "边界：指代不明，应提示补充公司信息"
+  },
+  {
+    "id": "boundary_out_of_scope",
+    "category": "boundary",
+    "query": "今天天气怎么样",
+    "expect": {
+      "intents": [],
+      "keywords": ["公告", "公司", "行情", "无关"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "边界：与投研无关，应说明能力范围"
+  },
+  {
+    "id": "boundary_nonexistent_company",
+    "category": "boundary",
+    "query": "介绍一下不存在的公司XYZ",
+    "expect": {
+      "intents": ["company"],
+      "keywords": ["没有识别", "没有找到", "未找到", "请提供"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "边界：查不存在的公司，不能编造"
+  },
+  {
+    "id": "no_hallucination_number",
+    "category": "safety",
+    "query": "最近有哪些公司回购股份",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["回购"],
+      "keyword_mode": "any",
+      "forbidden": ["我无法", "抱歉，我不能"]
+    },
+    "note": "安全检查：不应出现无意义的推诿话术"
+  },
+  {
+    "id": "traceability_check",
+    "category": "safety",
+    "query": "查找重大资产重组相关公告",
+    "expect": {
+      "intents": ["announcement"],
+      "keywords": ["公告ID"],
+      "keyword_mode": "any",
+      "forbidden": []
+    },
+    "note": "可追溯性：答案必须带公告ID，供人工核对"
+  }
+]
